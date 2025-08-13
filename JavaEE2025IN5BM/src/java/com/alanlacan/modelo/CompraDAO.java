@@ -1,24 +1,24 @@
 package com.alanlacan.modelo;
 
-import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import com.alanlacan.modelo.Compra;
 
-public class ClienteDAO {
-    
+import javax.persistence.*;
+import java.util.List;
+
+public class CompraDAO {
+
     private EntityManagerFactory emf;
     private EntityManager em;
 
-    public ClienteDAO() {
-        emf = Persistence.createEntityManagerFactory("dominio");
+    public CompraDAO() {
+        emf = Persistence.createEntityManagerFactory("dominio"); // Asegúrate que el persistence unit "dominio" esté en persistence.xml
         em = emf.createEntityManager();
     }
 
-    public void crearCliente(Cliente cliente) {
+    public void crearCompra(Compra compra) {
         try {
             em.getTransaction().begin();
-            em.persist(cliente); 
+            em.persist(compra);
             em.getTransaction().commit();
         } catch (Exception e) {
             em.getTransaction().rollback();
@@ -26,14 +26,14 @@ public class ClienteDAO {
         }
     }
 
-    public Cliente buscarCliente(int codigoCliente) {
-        return em.find(Cliente.class, codigoCliente);
+    public Compra buscarCompra(int codigoCompra) {
+        return em.find(Compra.class, codigoCompra);
     }
 
-    public void actualizarCliente(Cliente cliente) {
+    public void actualizarCompra(Compra compra) {
         try {
             em.getTransaction().begin();
-            em.merge(cliente);
+            em.merge(compra);
             em.getTransaction().commit();
         } catch (Exception e) {
             em.getTransaction().rollback();
@@ -41,12 +41,12 @@ public class ClienteDAO {
         }
     }
 
-    public void eliminarCliente(int codigoCliente) {
+    public void eliminarCompra(int codigoCompra) {
         try {
-            Cliente cliente = em.find(Cliente.class, codigoCliente);
-            if (cliente != null) {
+            Compra compra = em.find(Compra.class, codigoCompra);
+            if (compra != null) {
                 em.getTransaction().begin();
-                em.remove(cliente); 
+                em.remove(compra);
                 em.getTransaction().commit();
             }
         } catch (Exception e) {
@@ -55,8 +55,8 @@ public class ClienteDAO {
         }
     }
 
-    public List<Cliente> listarClientes() {
-        return em.createQuery("SELECT c FROM Cliente c", Cliente.class).getResultList();
+    public List<Compra> listarCompras() {
+        return em.createQuery("SELECT c FROM Compra c", Compra.class).getResultList();
     }
 
     public void cerrar() {
