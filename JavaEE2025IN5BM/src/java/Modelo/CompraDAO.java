@@ -1,6 +1,6 @@
-package com.alanlacan.modelo;
+package Modelo;
 
-import com.alanlacan.modelo.Compra;
+import Modelo.Compra;
 
 import javax.persistence.*;
 import java.util.List;

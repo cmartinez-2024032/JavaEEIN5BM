@@ -4,8 +4,8 @@
 */
 package Controlador;
  
-import com.alanlacan.modelo.Empleado;
-import com.alanlacan.modelo.EmpleadoDAO;
+import Modelo.Empleado;
+import Modelo.EmpleadoDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;

@@ -1,5 +1,5 @@
 
-package com.alanlacan.modelo;
+package Modelo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

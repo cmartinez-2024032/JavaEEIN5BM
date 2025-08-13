@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,15 +17,15 @@
     
     <nav>
         <ul>
-            <li><a href="cliente.jsp" target="contenido">Clientes</a></li>
-            <li><a href="proveedor.jsp" target="contenido">Proveedores</a></li>
-            <li><a href="producto.jsp" target="contenido">Productos</a></li>
-            <li><a href="empleado.jsp" target="contenido">Empleados</a></li>
-            <li><a href="venta.jsp" target="contenido">Ventas</a></li>
-            <li><a href="detalleVenta.jsp" target="contenido">Detalle Ventas</a></li>
-            <li><a href="factura.jsp" target="contenido">Facturas</a></li>
-            <li><a href="compras.jsp" target="contenido">Compras</a></li>
-            <li><a href="detalleCompra.jsp" target="contenido">Detalle Compras</a></li>
+            <li><a href="Controlador?menu=Cliente" target="contenido">Clientes</a></li>
+            <li><a href="Controlador?menu=Proveedor" target="contenido">Proveedores</a></li>
+            <li><a href="Controlador?menu=Producto" target="contenido">Productos</a></li>
+            <li><a href="Controlador?menu=Empleado&accion=Listar" target="contenido">Empleados</a></li>
+            <li><a href="Controlador?menu=Venta" target="contenido">Ventas</a></li>
+            <li><a href="Controlador?menu=DetalleVenta" target="contenido">Detalle Ventas</a></li>
+            <li><a href="Controlador?menu=Factura" target="contenido">Facturas</a></li>
+            <li><a href="Controlador?menu=Compras" target="contenido">Compras</a></li>
+            <li><a href="Controlador?menu=DetalleCompra" target="contenido">Detalle Compras</a></li>
             <li class="avatar">
                 <img src="img/UsuarioAdmin.png" alt="Avatar">
                 <ul class="avatar-menu">
@@ -39,11 +39,6 @@
     <div>
         <h2>Bienvenido a la ventana de Administrador</h2>
     </div>
-     
-    <!-- Aquí estará el contenido dinámico -->
-    <div class="panel">
-        <iframe name="contenido" src="cliente.jsp" width="100%" height="600px" style="border:none;"></iframe>
-    </div>
-
+ 
 </body>
 </html>

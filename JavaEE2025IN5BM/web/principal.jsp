@@ -19,7 +19,7 @@
     <a href="index.html" class="logo"> Essenza & Co.</a>
     <div class="links">
         <div class="seleccionar-productos">
-            <a href="Productos.html" class="nav-link">Productos</a>
+            <a href="Productos.html " class="nav-link">Productos</a>
             <div class="seleccionar">
                 <a href="#destacado">Destacado</a>
                 <a href="#accesorios">Accesorios H/M</a>
